@@ -1,4 +1,3 @@
-//this class will have most of the logic to solve the sudoku board as in checking to see if the players move is valid
 public class SolveBoard extends boxUtility {
 
     private Integer[][] board = new Integer[9][9];
@@ -6,7 +5,7 @@ public class SolveBoard extends boxUtility {
     SolveBoard() {
     }
 
-    //this is where some genius is involved my nigga
+
     public Integer[][] solvedBoard(Board b) {
         this.board = b.getBoard();
         this.solve();
@@ -14,7 +13,6 @@ public class SolveBoard extends boxUtility {
         return this.board;
     }
 
-//this is a solution to solve the baord using backtracking and it is recursive. lets test how long it takes
     private boolean solve() {
         for (int row = 0; row < board.length; row++) {
             for (int col = 0; col < board.length; col++) {
